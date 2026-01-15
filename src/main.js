@@ -56,9 +56,8 @@ function analyzeSalesData(data, options) {
    }));
 
 //4. @TODO: Индексация продавцов и товаров для быстрого доступа
-   
-
-
+  const sellerIndex = Object.fromEntries(sellerStats.map(item => [item.ID, item])); // Ключом будет id, значением — запись из sellerStats
+  const productIndex = Object.fromEntries(data.products.map(item => [item.sku, item])); // Ключом будет sku, значением — запись из data.products
 
 
 
