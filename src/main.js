@@ -142,6 +142,5 @@ return sellerStats.map(seller => ({
         sales_count: seller.sales_count, // Целое число, количество продаж продавца
         top_products: seller.top_products,// Массив объектов вида: { "sku": "SKU_008","quantity": 10}, топ-10 товаров продавца
         bonus: seller.bonus.toFixed(2)// Число с двумя знаками после точки, бонус продавца
-}));
-    
+}));  
 }
