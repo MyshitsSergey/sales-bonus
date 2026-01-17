@@ -74,14 +74,14 @@ const sellerStats = data.sellers.map(seller => (
         products_sold: {}
     }
 )); 
-   console.log(sellerStats);
+//    console.log(sellerStats);
 
 //4. @TODO: Индексация продавцов и товаров для быстрого доступа
     const sellerIndex = Object.fromEntries(sellerStats.map(sellers => [sellers.id, sellers]));
-    console.log(sellerIndex);
+    // console.log(sellerIndex);
 
     const productIndex = Object.fromEntries(data.products.map(products => [products.sku, products]));
-    console.log(productIndex);
+    // console.log(productIndex);
 
 //5. @TODO: Расчет выручки и прибыли для каждого продавца
 data.purchase_records.forEach(record => { // Чек 
@@ -113,7 +113,7 @@ sellerStats.sort((a, b) => {
     return 0;
 })
 
-console.log(sellerStats)
+// console.log(sellerStats)
 
 //7. @TODO: Назначение премий на основе ранжирования
 sellerStats.forEach((seller, index) => {
