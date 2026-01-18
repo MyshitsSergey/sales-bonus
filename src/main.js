@@ -84,6 +84,11 @@ const sellerStats = data.sellers.map(seller => (
     // console.log(productIndex);
 
 //5. @TODO: Расчет выручки и прибыли для каждого продавца
+if(!Array.isArray(data.purchase_records) || data.purchase_records === 0)
+    {
+        throw new Error("Записей о продаже нет")
+    }
+
 data.purchase_records.forEach(record => { // Чек 
     const seller = sellerIndex[record.seller_id]; // Продавец      
     seller.sales_count += 1; // Увеличить количество продаж 
